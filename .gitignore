@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+*.db
+*.zip
+outputs/
+tableau_extracts/
