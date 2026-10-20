@@ -111,9 +111,9 @@ with tab_discount:
     with right:
         m1, m2, m3 = st.columns(3)
         m1.metric("Break-even CAC, no discount", f"{one.break_even_cac.iloc[0]:,.0f}",
-                  f"{one.be_cac_pct_list_premium.iloc[0]:.0f}% of list premium", delta_color="off")
+                  f"{one.be_cac_pct_list_premium.iloc[0]:.0f}% of list premium", delta_color="off", delta_arrow="off")
         m2.metric("Best discount for this cohort", f"{one.loc[one.value_index.idxmax(), 'discount'] * 100:.1f}%",
-                  f"price gap {one.price_gap.iloc[0] * 100:.1f}%", delta_color="off")
+                  f"price gap {one.price_gap.iloc[0] * 100:.1f}%", delta_color="off", delta_arrow="off")
         m3.metric("Policies in cohort", f"{int(one.policies.iloc[0]):,}")
         st.plotly_chart(F.discount_scan_chart(one), width="stretch")
         p1, p2, p3 = st.columns(3)

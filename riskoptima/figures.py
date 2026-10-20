@@ -59,7 +59,7 @@ def discount_scan_chart(scan):
     fig.add_vline(x=best, line_dash="dash", line_color="grey", annotation_text=f"best: {best:.1f}%")
     fig.update_xaxes(title_text="Premium discount (%)")
     fig.update_yaxes(title_text="Value per policy sold (INR)", secondary_y=False)
-    fig.update_yaxes(title_text="% of list premium", secondary_y=True)
+    fig.update_yaxes(title_text="% of list premium", tickformat=".0f", secondary_y=True)
     fig.update_layout(title="Discount economics", height=400, margin=dict(l=10, r=10, t=50, b=10),
                       legend=dict(orientation="h", y=-0.25))
     return fig
